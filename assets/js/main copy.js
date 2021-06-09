@@ -47,6 +47,8 @@ function startClaim(){
     var totalBalances = 0;
     var lastClaim ;
     var nextClaimTime;
+    var successClaimCount = 0;
+    $('#totalSimCount').text(token.length);
         token.forEach(function(tokenvalue) {
             var url = "https://api.muyan66.com/api/signlog/Signin";
             $.ajax({
@@ -90,7 +92,8 @@ function startClaim(){
                    totalBalances = totalBalances + parseFloat(result.data.money);
                    $('#totalBalance').text(parseFloat(totalBalances).toFixed(2));
                    $('#lastClaimTime').text(lastClaim);
-
+                   successClaimCount++;
+                   $('#totalSim').text(successClaimCount);
                    var time = new Date();
                         time.setHours(time.getHours()+1);
                         nextClaimTime = time.getHours() +':'+time.getMinutes();
