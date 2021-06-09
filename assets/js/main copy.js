@@ -34,7 +34,7 @@ function getTimeRemaining() {
     remainingTime = (r.minutes + ':' + ('0' + r.seconds).slice(-2));
     $('#nextClaimTime').text(remainingTime);
     //console.log(remainingTime)
-    if($('#nextClaimTime').text() =='59:20' || $('#nextClaimTime').text() =='59:17' || $('#nextClaimTime').text() =='59:14' || $('#nextClaimTime').text() =='15:11'){
+    if($('#nextClaimTime').text() =='59:50' || $('#nextClaimTime').text() =='59:30' || $('#nextClaimTime').text() =='59:10' || $('#nextClaimTime').text() =='54:50'){
         startClaim();
     }
     // Run again just after next full second
