@@ -12,24 +12,24 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-      <div class="container">
-            <div class="row ">
-                <div class="col-md-5">
+      <div>
+            <div class="row pl-2 pr-2">
+                <div class="col-md-4">
                     <div class="card mt-2">
                         <div class="card-body">
                                 <div class="form-group">
                                 <label for="comment">Token List (Must seperate by \n) :</label>
-                                <textarea class="form-control" rows="18" id="tokens"></textarea>
+                                <textarea class="form-control" rows="30" id="tokens"></textarea>
                                 </div>
                                 <button class="btn btn-primary btn-block" onclick="buttonSubmit()">Start Claiming</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-8">
                     <div class="card mt-2">
-                        <div class="card-body">
-                            <label for="debugDiv">Response : </label>
-                            <div style='overflow-x:auto;height:500px;' id="debugDiv">
+                        <div class="card-body ">
+                            <label for="debugDiv">Total Balance : $ <b class="text-primary" id="totalBalance"></b> |  Last Claim : <b class="text-success" id="lastClaimTime"></b> |  Next Claim At : <b class="text-success" id="nextClaimTime"></b></label>
+                            <div style='overflow-x:auto;height:780px;' id="debugDiv">
                             </div>
                         </div>
                     </div>
